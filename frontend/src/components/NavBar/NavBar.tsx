@@ -99,6 +99,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
                       onClick={async () => {
                         await logout();
                         await apolloClient.resetStore();
+                        await router.push('/')
                       }}
                     >
                       Sign out
