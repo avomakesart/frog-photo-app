@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import reqRes from '../../api/reqRes';
-import { ImageList, NavBar, SearchBar } from '../../components';
+import { Head, ImageList, NavBar, SearchBar } from '../../components';
 import { withApollo } from '../../utils';
 import { useIsAuth } from '../../hooks';
 
@@ -20,6 +20,10 @@ const Search: React.FC<SearchProps> = ({}) => {
 
   return (
     <>
+      <Head
+        title='Photo App | Search'
+        description='Make a great search to all the photos'
+      />
       <NavBar />
       <div className='container mx-auto mt-8 px-3 mb-8'>
         <SearchBar onSubmit={OnSearchSubmit} />

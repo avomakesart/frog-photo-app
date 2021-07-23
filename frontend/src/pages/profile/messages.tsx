@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
-import { Button, NavBar } from '../../components';
+import { Button, Head, NavBar } from '../../components';
 import { useIsAuth } from '../../hooks';
 import { withApollo } from '../../utils';
 
@@ -11,6 +11,10 @@ const Messages: React.FC<MessagesProps> = ({}) => {
   const router = useRouter();
   return (
     <>
+      <Head
+        title='Photo App | Messages'
+        description='Chat with all the cool members'
+      />
       <NavBar />
 
       <div className='center-object text-center'>

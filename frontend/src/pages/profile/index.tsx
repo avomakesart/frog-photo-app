@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import reqRes from '../../api/reqRes';
-import { Button, FeedImages, Loader, NavBar } from '../../components';
+import { Button, FeedImages, Head, Loader, NavBar } from '../../components';
 import { useMeQuery } from '../../generated/graphql';
 import { useIsAuth } from '../../hooks';
 import { withApollo } from '../../utils';
@@ -30,6 +30,10 @@ const Profile: React.FC<ProfileProps> = ({}) => {
 
   return (
     <>
+      <Head
+        title='Photo App | Profile'
+        description='Here is all your information'
+      />
       <NavBar />
       {error && <Loader />}
       {loading ? (

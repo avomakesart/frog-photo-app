@@ -1,6 +1,6 @@
 import { Formik } from 'formik';
 import React from 'react';
-import { Button, Input, NavBar } from '../../components';
+import { Button, Head, Input, NavBar } from '../../components';
 import { CardForm } from '../../components/CardForm/CardForm';
 import { useMeQuery, useUpdateUserMutation } from '../../generated/graphql';
 import { useIsAuth } from '../../hooks';
@@ -19,6 +19,10 @@ const Settings: React.FC<SettingsProps> = ({}) => {
 
   return (
     <>
+      <Head
+        title='Photo App | Settings'
+        description='Edit all of your information'
+      />
       <NavBar />
       <div className='container mt-8 mx-auto lg:px-52'>
         {error && (

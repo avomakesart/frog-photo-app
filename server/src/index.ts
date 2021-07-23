@@ -16,13 +16,13 @@ import { UserResolver } from './resolvers';
 const main = async () => {
   const conn = await createConnection({
     type: 'postgres',
-    url: 'postgresql://alvaro.castillo@localhost:5432/frogphoto',
+    url: process.env.DATABASE_URL,
     logging: true,
     synchronize: true,
-    // ssl: {
-    //   requestCert: true,
-    //   rejectUnauthorized: false,
-    // },
+    ssl: {
+      requestCert: true,
+      rejectUnauthorized: false,
+    },
     migrations: [path.join(__dirname, './migrations/*')],
     entities: [User],
   });

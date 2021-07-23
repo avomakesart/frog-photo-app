@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import reqRes from '../../api/reqRes';
-import { Loader, ModalImage, NavBar, TopImages } from '../../components';
+import { Head, Loader, ModalImage, NavBar, TopImages } from '../../components';
 import { FeedImages } from '../../components/FeedImages/FeedImages';
 import { useIsAuth } from '../../hooks';
 import { sortByDate, withApollo } from '../../utils';
@@ -35,6 +35,10 @@ const Home: React.FC<HomeProps> = ({}) => {
 
   return (
     <>
+      <Head
+        title='Photo App | Home'
+        description='Discover the coolest pictures'
+      />
       <NavBar />
       {!loadingImages ? (
         <Loader />

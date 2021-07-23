@@ -1,6 +1,6 @@
 
 overwrite: true
-schema: "http://localhost:8000/graphql"
+schema: "https://frog-photo-app.herokuapp.com/graphql"
 documents: "src/graphql/**/*.graphql"
 generates:
   src/generated/graphql.tsx:

@@ -11,3 +11,4 @@ export { FeedImages } from './FeedImages/FeedImages';
 export { Loader } from './Loader/Loader';
 export { CardForm } from './CardForm/CardForm';
 export { HeroHome } from './HeroHome/HeroHome';
+export { Head } from './Head/Head';
