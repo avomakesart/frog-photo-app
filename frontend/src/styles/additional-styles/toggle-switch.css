@@ -1,0 +1,40 @@
+.form-switch {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 68px
+}
+
+.form-switch label {
+  border-radius: .25rem;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  height: 38px
+}
+
+.form-switch label>span:first-child {
+  border-radius: .25rem;
+  display: block;
+  position: absolute;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 transparent, 0 0 transparent, var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+  width: 30px;
+  height: 30px;
+  top: 4px;
+  left: 4px;
+  right: 50%;
+  transition: .15s ease-out
+}
+
+.form-switch input[type=checkbox]:checked+label {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 112, 244, var(--tw-bg-opacity))
+}
+
+.form-switch input[type=checkbox]:checked+label>span:first-child {
+  left: 34px
+}
